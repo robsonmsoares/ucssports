@@ -18,7 +18,7 @@ class CreateRodadasTable extends Migration
             $table->integer('campId');
             $table->date('dataJogo');
             $table->dateTime('horaJogo');
-            $table->string('localJogo');
+            $table->string('localJogo',50);
             $table->timestamps();
         });
     }

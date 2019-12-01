@@ -15,11 +15,11 @@ class CreateTimesTable extends Migration
     {
         Schema::create('times', function (Blueprint $table) {
             $table->bigIncrements('timeId');
-            $table->string('nome');
+            $table->string('nome',60);
             $table->char('estado',2);
-            $table->string('apelido');
+            $table->string('apelido',50);
             $table->date('dataFundacao');
-            $table->string('nomeEstadio');
+            $table->string('nomeEstadio',40);
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class CreateCampeonatosTable extends Migration
     {
         Schema::create('campeonatos', function (Blueprint $table) {
             $table->bigIncrements('campId');
-            $table->string('nome');
+            $table->string('nome',60);
             $table->integer('ano');
             $table->integer('qtdTimes');
             $table->char('casaFora',1);
