@@ -65,7 +65,7 @@
                                          class="img-circle" alt="User Image"/>
                                     <p>
                                         {{ Auth::user()->name }}
-                                        <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small>
+                                        <small>Cadastrado em {{ Auth::user()->created_at->format('M. Y') }}</small>
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
@@ -99,7 +99,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Company</a>.</strong> All rights reserved.
+            <strong>Universidade de Caxias do Sul Sports</strong>
         </footer>
 
     </div>
