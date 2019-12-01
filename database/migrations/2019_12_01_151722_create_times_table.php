@@ -14,7 +14,12 @@ class CreateTimesTable extends Migration
     public function up()
     {
         Schema::create('times', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('timeId');
+            $table->string('nome');
+            $table->char('estado',2);
+            $table->string('apelido');
+            $table->date('dataFundacao');
+            $table->string('nomeEstadio');
             $table->timestamps();
         });
     }

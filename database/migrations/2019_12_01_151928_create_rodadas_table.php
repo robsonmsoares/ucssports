@@ -14,7 +14,11 @@ class CreateRodadasTable extends Migration
     public function up()
     {
         Schema::create('rodadas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->integer('rodada');
+            $table->integer('campId');
+            $table->date('dataJogo');
+            $table->dateTime('horaJogo');
+            $table->string('localJogo');
             $table->timestamps();
         });
     }

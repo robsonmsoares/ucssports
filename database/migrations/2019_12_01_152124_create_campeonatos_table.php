@@ -14,7 +14,12 @@ class CreateCampeonatosTable extends Migration
     public function up()
     {
         Schema::create('campeonatos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('campId');
+            $table->string('nome');
+            $table->integer('ano');
+            $table->integer('qtdTimes');
+            $table->char('casaFora',1);
+            $table->date('dataInicio');
             $table->timestamps();
         });
     }

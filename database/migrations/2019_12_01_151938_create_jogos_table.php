@@ -14,8 +14,22 @@ class CreateJogosTable extends Migration
     public function up()
     {
         Schema::create('jogos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('jogosId');
+            $table->integer('campId');
+            $table->integer('rodada');
+            $table->integer('timeCasaId');
+            $table->integer('timeForaId');
+            $table->integer('golsTimeCasa');
+            $table->integer('golsTimeFora');
             $table->timestamps();
+
+            $table->foreign('campId')
+                ->references('campId')->on('campeonatos')
+                ->onDelete('cascade');
+
+            $table->foreign('rodada')
+                ->references('rodada')->on('rodadas')
+                ->onDelete('cascade');
         });
     }
 
