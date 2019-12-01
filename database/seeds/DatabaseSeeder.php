@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(UsersTableSeeder::class);
         /* USAR O COMANDO: php artisan DB:seed
          * ======================================================================================
          * Inserir os dados dos times
