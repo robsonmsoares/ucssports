@@ -22,5 +22,16 @@ class UsersTableSeeder extends Seeder
             'userTip'           => '1',
             'timeCoracaoId'     => '14',
         ]);
+
+        User::create([
+            'name'              => 'Leonardo Bortolini Trombini',
+            'apelido'           => 'Leonardo',
+            'email'             => 'lbtrombini@ucs.br',
+            'password'          => bcrypt('123456'),
+            'cpfCnpj'           => '12345678952',
+            'dataNascimento'    => '19950712',
+            'userTip'           => '1',
+            'timeCoracaoId'     => '14',
+        ]);
     }
 }

@@ -13,7 +13,7 @@
                 @if (Auth::guest())
                 <p>InfyOm</p>
                 @else
-                    <p>{{ Auth::user()->name}}</p>
+                    <p>{{ Auth::user()->apelido}}</p>
                 @endif
                 <!-- Status -->
             </div>

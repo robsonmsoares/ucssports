@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Campeonatos
  * @package App\Models
- * @version December 2, 2019, 6:17 pm -03
+ * @version December 2, 2019, 6:28 pm -03
  *
  * @property string nome
  * @property integer ano
@@ -21,14 +21,9 @@ class Campeonatos extends Model
     use SoftDeletes;
 
     public $table = 'campeonatos';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
-
-    protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'nome',
@@ -65,5 +60,5 @@ class Campeonatos extends Model
         'dataInicio' => 'required'
     ];
 
-    
+
 }
