@@ -40,7 +40,7 @@ class TimesAPIController extends AppBaseController
             $request->get('limit')
         );
 
-        return $this->sendResponse($times->toArray(), 'Times retrieved successfully');
+        return $this->sendResponse($times->toArray(), 'Time recuperado com sucesso.');
     }
 
     /**
@@ -57,7 +57,7 @@ class TimesAPIController extends AppBaseController
 
         $times = $this->timesRepository->create($input);
 
-        return $this->sendResponse($times->toArray(), 'Times saved successfully');
+        return $this->sendResponse($times->toArray(), 'Time salvo com sucesso.');
     }
 
     /**
@@ -74,10 +74,10 @@ class TimesAPIController extends AppBaseController
         $times = $this->timesRepository->find($id);
 
         if (empty($times)) {
-            return $this->sendError('Times not found');
+            return $this->sendError('Time não encontrado.');
         }
 
-        return $this->sendResponse($times->toArray(), 'Times retrieved successfully');
+        return $this->sendResponse($times->toArray(), 'Time recuperado com sucesso.');
     }
 
     /**
@@ -97,12 +97,12 @@ class TimesAPIController extends AppBaseController
         $times = $this->timesRepository->find($id);
 
         if (empty($times)) {
-            return $this->sendError('Times not found');
+            return $this->sendError('Time não encontrado.');
         }
 
         $times = $this->timesRepository->update($input, $id);
 
-        return $this->sendResponse($times->toArray(), 'Times updated successfully');
+        return $this->sendResponse($times->toArray(), 'Time alterado com sucesso.');
     }
 
     /**
@@ -121,11 +121,11 @@ class TimesAPIController extends AppBaseController
         $times = $this->timesRepository->find($id);
 
         if (empty($times)) {
-            return $this->sendError('Times not found');
+            return $this->sendError('Time não encontrado.');
         }
 
         $times->delete();
 
-        return $this->sendSuccess('Times deleted successfully');
+        return $this->sendSuccess('Time excluído com sucesso.');
     }
 }

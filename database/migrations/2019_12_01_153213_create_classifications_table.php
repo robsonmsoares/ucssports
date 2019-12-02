@@ -27,6 +27,7 @@ class CreateClassificationsTable extends Migration
             $table->integer('golsContra');
             $table->integer('saldoGols');
             $table->timestamps();
+            $table->date('deleted_at')->nullable();
 
             $table->foreign('campId')
                 ->references('campId')->on('campeonatos')

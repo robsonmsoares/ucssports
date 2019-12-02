@@ -58,7 +58,7 @@ class CampeonatosController extends AppBaseController
 
         $campeonatos = $this->campeonatosRepository->create($input);
 
-        Flash::success('Campeonatos saved successfully.');
+        Flash::success('Campeonato salvo com sucesso.');
 
         return redirect(route('campeonatos.index'));
     }
@@ -75,7 +75,7 @@ class CampeonatosController extends AppBaseController
         $campeonatos = $this->campeonatosRepository->find($id);
 
         if (empty($campeonatos)) {
-            Flash::error('Campeonatos not found');
+            Flash::error('Campeonato não encontrado');
 
             return redirect(route('campeonatos.index'));
         }
@@ -95,7 +95,7 @@ class CampeonatosController extends AppBaseController
         $campeonatos = $this->campeonatosRepository->find($id);
 
         if (empty($campeonatos)) {
-            Flash::error('Campeonatos not found');
+            Flash::error('Campeonato não encontrado');
 
             return redirect(route('campeonatos.index'));
         }
@@ -116,14 +116,14 @@ class CampeonatosController extends AppBaseController
         $campeonatos = $this->campeonatosRepository->find($id);
 
         if (empty($campeonatos)) {
-            Flash::error('Campeonatos not found');
+            Flash::error('Campeonato não encontrado');
 
             return redirect(route('campeonatos.index'));
         }
 
         $campeonatos = $this->campeonatosRepository->update($request->all(), $id);
 
-        Flash::success('Campeonatos updated successfully.');
+        Flash::success('Campeonato alterado com sucesso.');
 
         return redirect(route('campeonatos.index'));
     }
@@ -142,14 +142,14 @@ class CampeonatosController extends AppBaseController
         $campeonatos = $this->campeonatosRepository->find($id);
 
         if (empty($campeonatos)) {
-            Flash::error('Campeonatos not found');
+            Flash::error('Campeonato não encontrado');
 
             return redirect(route('campeonatos.index'));
         }
 
         $this->campeonatosRepository->delete($id);
 
-        Flash::success('Campeonatos deleted successfully.');
+        Flash::success('Campeonato excluído com sucesso.');
 
         return redirect(route('campeonatos.index'));
     }

@@ -18,13 +18,13 @@
 
 <!-- Datafundacao Field -->
 <div class="form-group">
-    {!! Form::label('dataFundacao', 'Datafundacao:') !!}
+    {!! Form::label('dataFundacao', 'Data de fundação:') !!}
     <p>{{ $times->dataFundacao }}</p>
 </div>
 
 <!-- Nomeestadio Field -->
 <div class="form-group">
-    {!! Form::label('nomeEstadio', 'Nomeestadio:') !!}
+    {!! Form::label('nomeEstadio', 'Nome do estádio:') !!}
     <p>{{ $times->nomeEstadio }}</p>
 </div>
 

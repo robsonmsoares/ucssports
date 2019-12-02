@@ -12,19 +12,19 @@
 
 <!-- Qtdtimes Field -->
 <div class="form-group">
-    {!! Form::label('qtdTimes', 'Qtdtimes:') !!}
+    {!! Form::label('qtdTimes', 'Quantidade de times:') !!}
     <p>{{ $campeonatos->qtdTimes }}</p>
 </div>
 
 <!-- Casafora Field -->
 <div class="form-group">
-    {!! Form::label('casaFora', 'Casafora:') !!}
+    {!! Form::label('casaFora', 'Casa e fora:') !!}
     <p>{{ $campeonatos->casaFora }}</p>
 </div>
 
 <!-- Datainicio Field -->
 <div class="form-group">
-    {!! Form::label('dataInicio', 'Datainicio:') !!}
+    {!! Form::label('dataInicio', 'Data de inicio:') !!}
     <p>{{ $campeonatos->dataInicio }}</p>
 </div>
 

@@ -21,6 +21,7 @@ class CreateTimesTable extends Migration
             $table->date('dataFundacao');
             $table->string('nomeEstadio',40);
             $table->timestamps();
+            $table->date('deleted_at')->nullable();
         });
     }
 

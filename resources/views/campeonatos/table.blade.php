@@ -4,9 +4,9 @@
             <tr>
                 <th>Nome</th>
         <th>Ano</th>
-        <th>Qtdtimes</th>
-        <th>Casafora</th>
-        <th>Datainicio</th>
+        <th>Quantidade de times</th>
+        <th>Casa e fora</th>
+        <th>Data de inicio</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>

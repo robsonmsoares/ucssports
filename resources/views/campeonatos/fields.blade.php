@@ -12,19 +12,19 @@
 
 <!-- Qtdtimes Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('qtdTimes', 'Qtdtimes:') !!}
+    {!! Form::label('qtdTimes', 'Quantidade de times:') !!}
     {!! Form::number('qtdTimes', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Casafora Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('casaFora', 'Casafora:') !!}
+    {!! Form::label('casaFora', 'Casa e fora:') !!}
     {!! Form::text('casaFora', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Datainicio Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('dataInicio', 'Datainicio:') !!}
+    {!! Form::label('dataInicio', 'Data de inicio:') !!}
     {!! Form::date('dataInicio', null, ['class' => 'form-control','id'=>'dataInicio']) !!}
 </div>
 
@@ -40,5 +40,5 @@
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('campeonatos.index') }}" class="btn btn-default">Cancel</a>
+    <a href="{{ route('campeonatos.index') }}" class="btn btn-default">Cancelar</a>
 </div>

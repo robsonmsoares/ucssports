@@ -5,8 +5,8 @@
                 <th>Nome</th>
         <th>Estado</th>
         <th>Apelido</th>
-        <th>Datafundacao</th>
-        <th>Nomeestadio</th>
+        <th>Data de fundação</th>
+        <th>Nome do estádio</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>

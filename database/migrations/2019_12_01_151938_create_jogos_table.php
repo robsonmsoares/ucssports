@@ -22,6 +22,7 @@ class CreateJogosTable extends Migration
             $table->integer('golsTimeCasa');
             $table->integer('golsTimeFora');
             $table->timestamps();
+            $table->date('deleted_at')->nullable();
 
             $table->foreign('campId')
                 ->references('campId')->on('campeonatos')

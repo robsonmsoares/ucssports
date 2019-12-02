@@ -18,7 +18,7 @@
 
 <!-- Datafundacao Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('dataFundacao', 'Datafundacao:') !!}
+    {!! Form::label('dataFundacao', 'Data de fundação:') !!}
     {!! Form::date('dataFundacao', null, ['class' => 'form-control','id'=>'dataFundacao']) !!}
 </div>
 
@@ -33,12 +33,12 @@
 
 <!-- Nomeestadio Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('nomeEstadio', 'Nomeestadio:') !!}
+    {!! Form::label('nomeEstadio', 'Nome do estádio:') !!}
     {!! Form::text('nomeEstadio', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('times.index') }}" class="btn btn-default">Cancel</a>
+    <a href="{{ route('times.index') }}" class="btn btn-default">Cancelar</a>
 </div>

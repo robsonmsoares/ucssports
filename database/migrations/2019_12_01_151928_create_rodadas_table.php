@@ -20,6 +20,7 @@ class CreateRodadasTable extends Migration
             $table->dateTime('horaJogo');
             $table->string('localJogo',50);
             $table->timestamps();
+            $table->date('deleted_at')->nullable();
         });
     }
 

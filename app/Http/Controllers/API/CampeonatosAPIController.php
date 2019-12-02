@@ -40,7 +40,7 @@ class CampeonatosAPIController extends AppBaseController
             $request->get('limit')
         );
 
-        return $this->sendResponse($campeonatos->toArray(), 'Campeonatos retrieved successfully');
+        return $this->sendResponse($campeonatos->toArray(), 'Campeonato recuperado com sucesso.');
     }
 
     /**
@@ -57,7 +57,7 @@ class CampeonatosAPIController extends AppBaseController
 
         $campeonatos = $this->campeonatosRepository->create($input);
 
-        return $this->sendResponse($campeonatos->toArray(), 'Campeonatos saved successfully');
+        return $this->sendResponse($campeonatos->toArray(), 'Campeonato salvo com sucesso.');
     }
 
     /**
@@ -74,10 +74,10 @@ class CampeonatosAPIController extends AppBaseController
         $campeonatos = $this->campeonatosRepository->find($id);
 
         if (empty($campeonatos)) {
-            return $this->sendError('Campeonatos not found');
+            return $this->sendError('Campeonato não encontrado.');
         }
 
-        return $this->sendResponse($campeonatos->toArray(), 'Campeonatos retrieved successfully');
+        return $this->sendResponse($campeonatos->toArray(), 'Campeonato recuperado com sucesso.');
     }
 
     /**
@@ -97,12 +97,12 @@ class CampeonatosAPIController extends AppBaseController
         $campeonatos = $this->campeonatosRepository->find($id);
 
         if (empty($campeonatos)) {
-            return $this->sendError('Campeonatos not found');
+            return $this->sendError('Campeonato não encontrado.');
         }
 
         $campeonatos = $this->campeonatosRepository->update($input, $id);
 
-        return $this->sendResponse($campeonatos->toArray(), 'Campeonatos updated successfully');
+        return $this->sendResponse($campeonatos->toArray(), 'Campeonato alterado com sucesso.');
     }
 
     /**
@@ -121,11 +121,11 @@ class CampeonatosAPIController extends AppBaseController
         $campeonatos = $this->campeonatosRepository->find($id);
 
         if (empty($campeonatos)) {
-            return $this->sendError('Campeonatos not found');
+            return $this->sendError('Campeonato não encontrado.');
         }
 
         $campeonatos->delete();
 
-        return $this->sendSuccess('Campeonatos deleted successfully');
+        return $this->sendSuccess('Campeonato excluído com sucesso.');
     }
 }

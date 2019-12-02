@@ -58,7 +58,7 @@ class TimesController extends AppBaseController
 
         $times = $this->timesRepository->create($input);
 
-        Flash::success('Times saved successfully.');
+        Flash::success('Time salvo com sucesso.');
 
         return redirect(route('times.index'));
     }
@@ -75,7 +75,7 @@ class TimesController extends AppBaseController
         $times = $this->timesRepository->find($id);
 
         if (empty($times)) {
-            Flash::error('Times not found');
+            Flash::error('Time não encontrado');
 
             return redirect(route('times.index'));
         }
@@ -95,7 +95,7 @@ class TimesController extends AppBaseController
         $times = $this->timesRepository->find($id);
 
         if (empty($times)) {
-            Flash::error('Times not found');
+            Flash::error('Time não encontrado');
 
             return redirect(route('times.index'));
         }
@@ -116,14 +116,14 @@ class TimesController extends AppBaseController
         $times = $this->timesRepository->find($id);
 
         if (empty($times)) {
-            Flash::error('Times not found');
+            Flash::error('Time não encontrado');
 
             return redirect(route('times.index'));
         }
 
         $times = $this->timesRepository->update($request->all(), $id);
 
-        Flash::success('Times updated successfully.');
+        Flash::success('Time alterado com sucesso.');
 
         return redirect(route('times.index'));
     }
@@ -142,14 +142,14 @@ class TimesController extends AppBaseController
         $times = $this->timesRepository->find($id);
 
         if (empty($times)) {
-            Flash::error('Times not found');
+            Flash::error('Time não encontrado');
 
             return redirect(route('times.index'));
         }
 
         $this->timesRepository->delete($id);
 
-        Flash::success('Times deleted successfully.');
+        Flash::success('Time excluído com sucesso.');
 
         return redirect(route('times.index'));
     }

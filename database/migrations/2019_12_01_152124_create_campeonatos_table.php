@@ -21,6 +21,7 @@ class CreateCampeonatosTable extends Migration
             $table->char('casaFora',1);
             $table->date('dataInicio');
             $table->timestamps();
+            $table->date('deleted_at')->nullable();
         });
     }
 
