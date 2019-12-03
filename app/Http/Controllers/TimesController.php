@@ -147,7 +147,7 @@ class TimesController extends AppBaseController
             return redirect(route('times.index'));
         }
 
-        $this->timesRepository->delete($id);
+        $this->timesRepository->delete($timeId);
 
         Flash::success('Time excluído com sucesso.');
 
