@@ -16,7 +16,7 @@
                 <td>{{ $times->nome }}</td>
             <td>{{ $times->estado }}</td>
             <td>{{ $times->apelido }}</td>
-            <td>{{ $times->dataFundacao }}</td>
+            <td>{{ $times->dataFundacao->format("d/m/Y") }}</td>
             <td>{{ $times->nomeEstadio }}</td>
                 <td>
                     {!! Form::open(['route' => ['times.destroy', $times->timeId], 'method' => 'delete']) !!}

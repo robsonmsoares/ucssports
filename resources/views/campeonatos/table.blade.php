@@ -17,7 +17,7 @@
             <td>{{ $campeonatos->ano }}</td>
             <td>{{ $campeonatos->qtdTimes }}</td>
             <td>{{ $campeonatos->casaFora }}</td>
-            <td>{{ $campeonatos->dataInicio }}</td>
+            <td >{{ $campeonatos->dataInicio->format("d/m/Y") }}</td>
                 <td>
                     {!! Form::open(['route' => ['campeonatos.destroy', $campeonatos->campId], 'method' => 'delete']) !!}
                     <div class='btn-group'>

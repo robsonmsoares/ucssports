@@ -25,6 +25,6 @@
 <!-- Datainicio Field -->
 <div class="form-group">
     {!! Form::label('dataInicio', 'Data de inicio:') !!}
-    <p>{{ $campeonatos->dataInicio }}</p>
+    <p>{{ $campeonatos->dataInicio->format("d/m/Y") }}</p>
 </div>
 
