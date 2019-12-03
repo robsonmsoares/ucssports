@@ -62,16 +62,16 @@ class CampeonatosAPIController extends AppBaseController
 
     /**
      * Display the specified Campeonatos.
-     * GET|HEAD /campeonatos/{id}
+     * GET|HEAD /campeonatos/{campId}
      *
-     * @param int $id
+     * @param int campId
      *
      * @return Response
      */
-    public function show($id)
+    public function show($campId)
     {
         /** @var Campeonatos $campeonatos */
-        $campeonatos = $this->campeonatosRepository->find($id);
+        $campeonatos = $this->campeonatosRepository->find($campId);
 
         if (empty($campeonatos)) {
             return $this->sendError('Campeonato não encontrado.');
@@ -82,43 +82,43 @@ class CampeonatosAPIController extends AppBaseController
 
     /**
      * Update the specified Campeonatos in storage.
-     * PUT/PATCH /campeonatos/{id}
+     * PUT/PATCH /campeonatos/{campId}
      *
-     * @param int $id
+     * @param int $campId
      * @param UpdateCampeonatosAPIRequest $request
      *
      * @return Response
      */
-    public function update($id, UpdateCampeonatosAPIRequest $request)
+    public function update($campId, UpdateCampeonatosAPIRequest $request)
     {
         $input = $request->all();
 
         /** @var Campeonatos $campeonatos */
-        $campeonatos = $this->campeonatosRepository->find($id);
+        $campeonatos = $this->campeonatosRepository->find($campId);
 
         if (empty($campeonatos)) {
             return $this->sendError('Campeonato não encontrado.');
         }
 
-        $campeonatos = $this->campeonatosRepository->update($input, $id);
+        $campeonatos = $this->campeonatosRepository->update($input, $campId);
 
         return $this->sendResponse($campeonatos->toArray(), 'Campeonato alterado com sucesso.');
     }
 
     /**
      * Remove the specified Campeonatos from storage.
-     * DELETE /campeonatos/{id}
+     * DELETE /campeonatos/{campId}
      *
-     * @param int $id
+     * @param int $campId
      *
      * @throws \Exception
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($campId)
     {
         /** @var Campeonatos $campeonatos */
-        $campeonatos = $this->campeonatosRepository->find($id);
+        $campeonatos = $this->campeonatosRepository->find($campId);
 
         if (empty($campeonatos)) {
             return $this->sendError('Campeonato não encontrado.');

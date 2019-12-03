@@ -62,63 +62,63 @@ class TimesAPIController extends AppBaseController
 
     /**
      * Display the specified Times.
-     * GET|HEAD /times/{id}
+     * GET|HEAD /times/{timeId}
      *
-     * @param int $id
+     * @param int $timeId
      *
      * @return Response
      */
-    public function show($id)
+    public function show($timeId)
     {
         /** @var Times $times */
-        $times = $this->timesRepository->find($id);
+        $times = $this->timesRepository->find($timeId);
 
         if (empty($times)) {
             return $this->sendError('Time não encontrado.');
         }
 
-        return $this->sendResponse($times->toArray(), 'Time recuperado com sucesso.');
+        return $this->sendResponse($times, 'Time recuperado com sucesso.');
     }
 
     /**
      * Update the specified Times in storage.
-     * PUT/PATCH /times/{id}
+     * PUT/PATCH /times/{timeId}
      *
-     * @param int $id
+     * @param int $timeId
      * @param UpdateTimesAPIRequest $request
      *
      * @return Response
      */
-    public function update($id, UpdateTimesAPIRequest $request)
+    public function update($timeId, UpdateTimesAPIRequest $request)
     {
         $input = $request->all();
 
         /** @var Times $times */
-        $times = $this->timesRepository->find($id);
+        $times = $this->timesRepository->find($timeId);
 
         if (empty($times)) {
             return $this->sendError('Time não encontrado.');
         }
 
-        $times = $this->timesRepository->update($input, $id);
+        $times = $this->timesRepository->update($input, $timeId);
 
         return $this->sendResponse($times->toArray(), 'Time alterado com sucesso.');
     }
 
     /**
      * Remove the specified Times from storage.
-     * DELETE /times/{id}
+     * DELETE /times/{timeId}
      *
-     * @param int $id
+     * @param int $timeId
      *
      * @throws \Exception
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($timeId)
     {
         /** @var Times $times */
-        $times = $this->timesRepository->find($id);
+        $times = $this->timesRepository->find($timeId);
 
         if (empty($times)) {
             return $this->sendError('Time não encontrado.');

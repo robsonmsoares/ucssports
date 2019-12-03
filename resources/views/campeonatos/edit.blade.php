@@ -11,7 +11,7 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($campeonatos, ['route' => ['campeonatos.update', $campeonatos->id], 'method' => 'patch']) !!}
+                   {!! Form::model($campeonatos, ['route' => ['campeonatos.update', $campeonatos->campId], 'method' => 'patch']) !!}
 
                         @include('campeonatos.fields')
 
