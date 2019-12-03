@@ -70,9 +70,9 @@ class TimesController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id)
+    public function show($timeId)
     {
-        $times = $this->timesRepository->find($id);
+        $times = $this->timesRepository->find($timeId);
 
         if (empty($times)) {
             Flash::error('Time não encontrado');
@@ -90,9 +90,9 @@ class TimesController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
+    public function edit($timeId)
     {
-        $times = $this->timesRepository->find($id);
+        $times = $this->timesRepository->find($timeId);
 
         if (empty($times)) {
             Flash::error('Time não encontrado');
@@ -111,9 +111,9 @@ class TimesController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateTimesRequest $request)
+    public function update($timeId, UpdateTimesRequest $request)
     {
-        $times = $this->timesRepository->find($id);
+        $times = $this->timesRepository->find($timeId);
 
         if (empty($times)) {
             Flash::error('Time não encontrado');
@@ -121,7 +121,7 @@ class TimesController extends AppBaseController
             return redirect(route('times.index'));
         }
 
-        $times = $this->timesRepository->update($request->all(), $id);
+        $times = $this->timesRepository->update($request->all(), $timeId);
 
         Flash::success('Time alterado com sucesso.');
 
@@ -137,9 +137,9 @@ class TimesController extends AppBaseController
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($timeId)
     {
-        $times = $this->timesRepository->find($id);
+        $times = $this->timesRepository->find($timeId);
 
         if (empty($times)) {
             Flash::error('Time não encontrado');

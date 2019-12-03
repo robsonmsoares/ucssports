@@ -70,9 +70,9 @@ class CampeonatosController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id)
+    public function show($campId)
     {
-        $campeonatos = $this->campeonatosRepository->find($id);
+        $campeonatos = $this->campeonatosRepository->find($campId);
 
         if (empty($campeonatos)) {
             Flash::error('Campeonato não encontrado');
@@ -90,9 +90,9 @@ class CampeonatosController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
+    public function edit($campId)
     {
-        $campeonatos = $this->campeonatosRepository->find($id);
+        $campeonatos = $this->campeonatosRepository->find($campId);
 
         if (empty($campeonatos)) {
             Flash::error('Campeonato não encontrado');
@@ -111,9 +111,9 @@ class CampeonatosController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateCampeonatosRequest $request)
+    public function update($campId, UpdateCampeonatosRequest $request)
     {
-        $campeonatos = $this->campeonatosRepository->find($id);
+        $campeonatos = $this->campeonatosRepository->find($campId);
 
         if (empty($campeonatos)) {
             Flash::error('Campeonato não encontrado');
@@ -121,7 +121,7 @@ class CampeonatosController extends AppBaseController
             return redirect(route('campeonatos.index'));
         }
 
-        $campeonatos = $this->campeonatosRepository->update($request->all(), $id);
+        $campeonatos = $this->campeonatosRepository->update($request->all(), $campId);
 
         Flash::success('Campeonato alterado com sucesso.');
 
@@ -137,9 +137,9 @@ class CampeonatosController extends AppBaseController
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($campId)
     {
-        $campeonatos = $this->campeonatosRepository->find($id);
+        $campeonatos = $this->campeonatosRepository->find($campId);
 
         if (empty($campeonatos)) {
             Flash::error('Campeonato não encontrado');
@@ -147,7 +147,7 @@ class CampeonatosController extends AppBaseController
             return redirect(route('campeonatos.index'));
         }
 
-        $this->campeonatosRepository->delete($id);
+        $this->campeonatosRepository->delete($campId);
 
         Flash::success('Campeonato excluído com sucesso.');
 
