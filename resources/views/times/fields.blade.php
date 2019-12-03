@@ -25,7 +25,7 @@
 @section('scripts')
     <script type="text/javascript">
         $('#dataFundacao').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
+            format: 'YYYY-MM-DD',
             useCurrent: false
         })
     </script>
@@ -39,6 +39,6 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
     <a href="{{ route('times.index') }}" class="btn btn-default">Cancelar</a>
 </div>
