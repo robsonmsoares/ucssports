@@ -128,4 +128,46 @@ class CampeonatosAPIController extends AppBaseController
 
         return $this->sendSuccess('Campeonato excluído com sucesso.');
     }
+
+    /**
+     * Include times on camp.
+     *
+     * @param int $campId
+     *
+     * @throws \Exception
+     *
+     * @return Response
+     *
+    public function include($campId)
+    {
+
+    }*/
+
+    /**
+     * Sort rodadas.
+     *
+     * @param int $campId
+     *
+     * @throws \Exception
+     *
+     * @return Response
+     *
+    public function sort($campId)
+    {
+
+    }*/
+
+    /**
+     * Include results.
+     *
+     * @param int $campId
+     *
+     * @throws \Exception
+     *
+     * @return Response
+     *
+    public function results($campId)
+    {
+
+    }*/
 }
