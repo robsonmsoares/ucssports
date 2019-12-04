@@ -28,3 +28,5 @@ Route::get('/home', 'HomeController@index');
 Route::resource('times', 'TimesController');
 
 Route::resource('campeonatos', 'CampeonatosController');
+
+Route::resource('classificacao', 'ClassificacaoController');

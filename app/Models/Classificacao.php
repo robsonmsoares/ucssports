@@ -2,20 +2,38 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Classification extends Model
+/**
+ * Class Classificacao
+ * @package App\Models
+ * @version December 3, 2019, 9:23 pm -03
+ *
+ * @property integer posicao
+ * @property integer campId
+ * @property integer rodada
+ * @property integer timeId
+ * @property integer pontos
+ * @property integer vitorias
+ * @property integer empates
+ * @property integer derrotas
+ * @property integer golsPro
+ * @property integer golsContra
+ * @property integer saldoGols
+ */
+class Classificacao extends Model
 {
-    use SoftDeletes;
-
-    public $table = 'times';
+    public $table = 'classifications';
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
+    protected $dates = ['deleted_at'];
+
+    protected $primaryKey = 'classificationId';
+
     public $fillable = [
-        'classificationId',
         'posicao',
         'campId',
         'rodada',
@@ -55,7 +73,6 @@ class Classification extends Model
      * @var array
      */
     public static $rules = [
-        'classificationId' => 'required',
         'posicao' => 'required',
         'campId' => 'required',
         'rodada' => 'required',
@@ -68,4 +85,6 @@ class Classification extends Model
         'golsContra' => 'required',
         'saldoGols' => 'required'
     ];
+
+
 }
