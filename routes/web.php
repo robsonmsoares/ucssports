@@ -30,3 +30,7 @@ Route::resource('times', 'TimesController');
 Route::resource('campeonatos', 'CampeonatosController');
 
 Route::resource('classificacao', 'ClassificacaoController');
+
+Route::resource('rodadas', 'RodadasController');
+
+Route::resource('jogos', 'JogosController');

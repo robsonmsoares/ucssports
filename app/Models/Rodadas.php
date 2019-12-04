@@ -2,17 +2,31 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Class Rodadas
+ * @package App\Models
+ * @version December 4, 2019, 9:33 am -03
+ *
+ * @property integer rodada
+ * @property integer campId
+ * @property string dataJogo
+ * @property string|\Carbon\Carbon horaJogo
+ * @property string localJogo
+ */
 class Rodadas extends Model
 {
-    use SoftDeletes;
-
     public $table = 'rodadas';
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
+    const DELETED_AT = 'deleted_at';
+
+    protected $dates = ['deleted_at'];
+
+    protected $primaryKey = 'rodada';
 
     public $fillable = [
         'rodada',
@@ -31,7 +45,7 @@ class Rodadas extends Model
         'rodada' => 'integer',
         'campId' => 'integer',
         'dataJogo' => 'date',
-        'horaJogo' => 'dateTime',
+        'horaJogo' => 'datetime',
         'localJogo' => 'string'
     ];
 

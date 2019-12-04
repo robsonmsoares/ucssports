@@ -2,15 +2,15 @@
     <table class="table" id="classificacao-table">
         <thead>
             <tr>
-                <th>Posicao</th>
-                <th>Timeid</th>
+                <th>Posição</th>
+                <th>Time</th>
                 <th>Pontos</th>
-                <th>Vitorias</th>
+                <th>Vitórias</th>
                 <th>Empates</th>
                 <th>Derrotas</th>
-                <th>Golspro</th>
-                <th>Golscontra</th>
-                <th>Saldogols</th>
+                <th>Gols pró</th>
+                <th>Gols contra</th>
+                <th>Saldo de gols</th>
             </tr>
         </thead>
         <tbody>

@@ -23,3 +23,8 @@ Route::resource('times', 'TimesAPIController');
 Route::resource('campeonatos', 'CampeonatosAPIController');
 
 Route::resource('classificacao', 'ClassificacaoAPIController');
+
+
+Route::resource('rodadas', 'RodadasAPIController');
+
+Route::resource('jogos', 'JogosAPIController');
