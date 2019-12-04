@@ -3,10 +3,10 @@
         <thead>
             <tr>
                 <th>Nome</th>
-        <th>Estado</th>
-        <th>Apelido</th>
-        <th>Data de fundação</th>
-        <th>Nome do estádio</th>
+                <th>Estado</th>
+                <th>Apelido</th>
+                <th>Data de fundação</th>
+                <th>Nome do estádio</th>
                 <th colspan="3">Ações</th>
             </tr>
         </thead>
@@ -14,10 +14,10 @@
         @foreach($times as $times)
             <tr>
                 <td>{{ $times->nome }}</td>
-            <td>{{ $times->estado }}</td>
-            <td>{{ $times->apelido }}</td>
-            <td>{{ $times->dataFundacao->format("d/m/Y") }}</td>
-            <td>{{ $times->nomeEstadio }}</td>
+                <td>{{ $times->estado }}</td>
+                <td>{{ $times->apelido }}</td>
+                <td>{{ $times->dataFundacao->format("d/m/Y") }}</td>
+                <td>{{ $times->nomeEstadio }}</td>
                 <td>
                     {!! Form::open(['route' => ['times.destroy', $times->timeId], 'method' => 'delete']) !!}
                     <div class='btn-group'>

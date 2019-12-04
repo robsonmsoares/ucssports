@@ -40,7 +40,7 @@ class ClassificacaoAPIController extends AppBaseController
             $request->get('limit')
         );
 
-        return $this->sendResponse($classificacao->toArray(), 'Classificacao retrieved successfully');
+        return $this->sendResponse($classificacao->toArray(), 'Classificação recuperada com sucesso');
     }
 
     /**
@@ -57,7 +57,7 @@ class ClassificacaoAPIController extends AppBaseController
 
         $classificacao = $this->classificacaoRepository->create($input);
 
-        return $this->sendResponse($classificacao->toArray(), 'Classificacao saved successfully');
+        return $this->sendResponse($classificacao->toArray(), 'Classificação salva com sucesso');
     }
 
     /**
@@ -74,10 +74,10 @@ class ClassificacaoAPIController extends AppBaseController
         $classificacao = $this->classificacaoRepository->find($classificationId);
 
         if (empty($classificacao)) {
-            return $this->sendError('Classificacao not found');
+            return $this->sendError('Classificação não encontrada');
         }
 
-        return $this->sendResponse($classificacao->toArray(), 'Classificacao retrieved successfully');
+        return $this->sendResponse($classificacao->toArray(), 'Classificacao recuperada com sucesso');
     }
 
     /**
@@ -97,12 +97,12 @@ class ClassificacaoAPIController extends AppBaseController
         $classificacao = $this->classificacaoRepository->find($classificationId);
 
         if (empty($classificacao)) {
-            return $this->sendError('Classificacao not found');
+            return $this->sendError('Classificação não encontrada');
         }
 
         $classificacao = $this->classificacaoRepository->update($input, $classificationId);
 
-        return $this->sendResponse($classificacao->toArray(), 'Classificacao updated successfully');
+        return $this->sendResponse($classificacao->toArray(), 'Classificacao alterada com sucesso');
     }
 
     /**
@@ -121,11 +121,11 @@ class ClassificacaoAPIController extends AppBaseController
         $classificacao = $this->classificacaoRepository->find($classificationId);
 
         if (empty($classificacao)) {
-            return $this->sendError('Classificacao not found');
+            return $this->sendError('Classificação não encontrada');
         }
 
         $classificacao->delete();
 
-        return $this->sendSuccess('Classificacao deleted successfully');
+        return $this->sendSuccess('Classificação excluída com sucesso');
     }
 }

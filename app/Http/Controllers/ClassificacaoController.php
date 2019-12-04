@@ -58,7 +58,7 @@ class ClassificacaoController extends AppBaseController
 
         $classificacao = $this->classificacaoRepository->create($input);
 
-        Flash::success('Classificacao saved successfully.');
+        Flash::success('Classificação salva com sucesso.');
 
         return redirect(route('classificacao.index'));
     }
@@ -75,7 +75,7 @@ class ClassificacaoController extends AppBaseController
         $classificacao = $this->classificacaoRepository->find($classificationId);
 
         if (empty($classificacao)) {
-            Flash::error('Classificacao not found');
+            Flash::error('Classificação não encontrada');
 
             return redirect(route('classificacao.index'));
         }
@@ -95,7 +95,7 @@ class ClassificacaoController extends AppBaseController
         $classificacao = $this->classificacaoRepository->find($classificationId);
 
         if (empty($classificacao)) {
-            Flash::error('Classificacao not found');
+            Flash::error('Classificação não encontrada');
 
             return redirect(route('classificacao.index'));
         }
@@ -116,14 +116,14 @@ class ClassificacaoController extends AppBaseController
         $classificacao = $this->classificacaoRepository->find($classificationId);
 
         if (empty($classificacao)) {
-            Flash::error('Classificacao not found');
+            Flash::error('Classificação não encontrada');
 
             return redirect(route('classificacao.index'));
         }
 
         $classificacao = $this->classificacaoRepository->update($request->all(), $classificationId);
 
-        Flash::success('Classificacao updated successfully.');
+        Flash::success('Classificação alterada com sucesso.');
 
         return redirect(route('classificacao.index'));
     }
@@ -142,14 +142,14 @@ class ClassificacaoController extends AppBaseController
         $classificacao = $this->classificacaoRepository->find($classificationId);
 
         if (empty($classificacao)) {
-            Flash::error('Classificacao not found');
+            Flash::error('Classificação não encontrada');
 
             return redirect(route('classificacao.index'));
         }
 
         $this->classificacaoRepository->delete($classificationId);
 
-        Flash::success('Classificacao deleted successfully.');
+        Flash::success('Classificação excluída com sucesso.');
 
         return redirect(route('classificacao.index'));
     }

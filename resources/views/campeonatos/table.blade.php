@@ -3,10 +3,10 @@
         <thead>
             <tr>
                 <th>Nome</th>
-        <th>Ano</th>
-        <th>Quantidade de times</th>
-        <th>Casa e fora</th>
-        <th>Data de inicio</th>
+                <th>Ano</th>
+                <th>Quantidade de times</th>
+                <th>Casa e fora</th>
+                <th>Data de inicio</th>
                 <th colspan="3">Ações</th>
             </tr>
         </thead>
@@ -14,10 +14,10 @@
         @foreach($campeonatos as $campeonatos)
             <tr>
                 <td>{{ $campeonatos->nome }}</td>
-            <td>{{ $campeonatos->ano }}</td>
-            <td>{{ $campeonatos->qtdTimes }}</td>
-            <td>{{ $campeonatos->casaFora }}</td>
-            <td >{{ $campeonatos->dataInicio->format("d/m/Y") }}</td>
+                <td>{{ $campeonatos->ano }}</td>
+                <td>{{ $campeonatos->qtdTimes }}</td>
+                <td>{{ $campeonatos->casaFora }}</td>
+                <td >{{ $campeonatos->dataInicio->format("d/m/Y") }}</td>
                 <td>
                     {!! Form::open(['route' => ['campeonatos.destroy', $campeonatos->campId], 'method' => 'delete']) !!}
                     <div class='btn-group'>
