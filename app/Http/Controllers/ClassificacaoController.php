@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateClassificacaoRequest;
 use App\Http\Requests\UpdateClassificacaoRequest;
+use App\Models\Campeonatos;
+use App\Models\Rodadas;
 use App\Repositories\ClassificacaoRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -29,10 +31,13 @@ class ClassificacaoController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $campeonatosDropDown = Campeonatos::all();
+
+        $rodadasDropDown = Rodadas::all();
+
         $classificacao = $this->classificacaoRepository->all();
 
-        return view('classificacao.index')
-            ->with('classificacao', $classificacao);
+        return view('classificacao.index', ['classificacao' => $classificacao, 'campeonatosDropDown' => $campeonatosDropDown, 'rodadasDropDown' => $rodadasDropDown]);
     }
 
     /**

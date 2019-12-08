@@ -12,8 +12,8 @@
         @foreach($rodadas as $rodadas)
             <tr>
                 <td>{{ $rodadas->rodada }}</td>
-                <td>{{ $rodadas->dataJogo }}</td>
-                <td>{{ $rodadas->horaJogo }}</td>
+                <td>{{ $rodadas->dataJogo->format("d/m/Y") }}</td>
+                <td>{{ $rodadas->horaJogo->format("h:m:s") }}</td>
                 <td>
                     {!! Form::open(['route' => ['rodadas.destroy', $rodadas->rodada], 'method' => 'delete']) !!}
                     <div class='btn-group'>

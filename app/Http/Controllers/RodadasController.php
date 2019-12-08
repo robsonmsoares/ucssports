@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateRodadasRequest;
 use App\Http\Requests\UpdateRodadasRequest;
+use App\Models\Campeonatos;
 use App\Repositories\RodadasRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -29,9 +30,11 @@ class RodadasController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $campeonatosDropDown = Campeonatos::all();
+
         $rodadas = $this->rodadasRepository->all();
 
-        return view('rodadas.index')->with('rodadas', $rodadas);
+        return view('rodadas.index', ['rodadas' => $rodadas, 'campeonatosDropDown' => $campeonatosDropDown]);
     }
 
     /**

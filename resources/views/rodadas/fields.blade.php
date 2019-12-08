@@ -22,7 +22,7 @@
 
 @section('scripts')
     <script type="text/javascript">
-        $('#horaJogo').datetimepicker({
+        $('#horaJogo').timepicker({
             format: 'HH:MM:SS',
             useCurrent: false
         })

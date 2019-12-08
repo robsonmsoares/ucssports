@@ -12,10 +12,12 @@
         <div class="clearfix"></div>
         <div>
             <label>
-                {!! Form::select('selectCampeonato', ['1' => 'Campeonato1', '2' => 'Campeonato2'], null, ['placeholder' => 'Selecione um campeonato', 'class' => 'pull-left form-control']) !!}
-            </label>
-            <label>
-                {!! Form::select('selectRodada', ['1' => 'Rodada1', '2' => 'Rodada2'], null, ['placeholder' => 'Selecione uma rodada', 'class' => 'pull-left form-control']) !!}
+                <select class="pull-left form-control">
+                    <option value=""> Selecione um campeonato </option>
+                    @foreach($campeonatosDropDown as $camp)
+                        <option value="{{$camp->campId}}"> {{$camp->nome}} </option>
+                    @endforeach
+                </select>
             </label>
         </div>
         <div class="box box-primary">

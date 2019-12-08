@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateJogosRequest;
 use App\Http\Requests\UpdateJogosRequest;
+use App\Models\Campeonatos;
+use App\Models\Rodadas;
 use App\Repositories\JogosRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -29,10 +31,13 @@ class JogosController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $campeonatosDropDown = Campeonatos::all();
+
+        $rodadasDropDown = Rodadas::all();
+
         $jogos = $this->jogosRepository->all();
 
-        return view('jogos.index')
-            ->with('jogos', $jogos);
+        return view('jogos.index', ['jogos' => $jogos, 'campeonatosDropDown' => $campeonatosDropDown, 'rodadasDropDown' => $rodadasDropDown]);
     }
 
     /**
